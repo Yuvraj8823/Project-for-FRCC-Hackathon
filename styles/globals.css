@@ -1,0 +1,224 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/*navbar*/
+
+.header{
+  margin-right: 20px;
+}
+.navbar{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #25c95d;
+}
+.navelem{
+  display: inline-block;
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+}
+.navelem:hover{
+  cursor: pointer;
+  color: white;
+}
+.nostyle{
+  text-decoration: none;
+  color:inherit;
+}
+.joinBtn{
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 25px;
+}
+.join:hover .joinBtn{
+  background-color: black;
+}
+
+/* Home Page Content*/
+
+.home{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hpcontent{
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 100px;
+}
+.hpcontent h1{
+  margin-left: 50px;
+  font-size: 62px;
+}
+.hpimg{
+  height: 88.9vh;
+}
+#joinNow{
+  width: 300px;
+  font-size: 62px;
+  font-weight: bold;
+  border: 5px solid black;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #25c95d;
+  margin: 20px 0 50px 50px;
+}
+#joinNow:hover{
+  background-color: #469360;
+}
+
+/* Community Page Content*/
+.gallary{
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  background-color: rgb(234, 234, 222);
+}
+.cards{
+  margin: 50px 20px;
+  
+  border-radius: 10px;
+  width: 400px;
+  background-color: white;
+  padding-bottom: 5px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px 1px;
+  
+}
+.cards:hover{
+  box-shadow: 0 0 20px 1px black;
+  transform: scale(1.1);
+}
+.card_img{
+  height: 250px;
+  width: 400px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card_info{
+  margin: 10px ;
+}
+.watch{
+  width: 100px;
+  height: 25px;
+  border: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
+}
+.watch:hover{
+  background-color: #f40606;
+  color: white;
+}
+
+.card_type{
+  color: #3b3b3b;
+  font-weight: 450;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.card_name{
+  text-decoration: none;
+  margin: 2px;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* For Sales product Cards*/
+
+.product{
+  width:60vw;
+  margin: 100px auto;
+  border-radius: 10px;
+  overflow:hidden;
+  display: flex;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 1px black;
+  
+}
+.proimg{
+  height: 200px;
+  width: 200px;
+  margin-right: 40px;
+  border-radius: 10px;
+}
+
+.productdes{
+  margin: 20px;
+  line-height: 2em;
+}
+
+.product:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 1px black;
+  cursor: pointer;
+   
+}
+
+.loginpage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:400px;
+  height: 400px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 100px 1px;
+  line-height: 25px;
+}
+.logincred{
+  width: 200px;
+  font-size: 18px;
+  margin: 10px 20%;
+  padding: 10px;
+}
+.submitBtn{
+  width:225px;
+  height: 50px;
+  font-size: 18px;
+  margin: 10px 20%;
+  cursor: pointer;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  background-color: #25c95d;
+  height: 50px;
+  width: 100%;
+  margin-top: auto;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width:800px) {
+  .hpimg{
+    width: 100vw;
+    height: auto;
+  }
+  .product{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .productdes{
+    margin-left: 5px;
+    width: 180px;
+    
+  }
+}
