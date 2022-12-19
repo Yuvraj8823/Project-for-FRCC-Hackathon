@@ -1,5 +1,6 @@
 import connectDb from "../../middleware/mongoose";
 import Register from "../../models/signupmodel";
+import CryptoJS from "crypto-js";
 
 const addUser = async (req,res)=>{
     await connectDb()
@@ -8,12 +9,9 @@ const addUser = async (req,res)=>{
     //     throw new Error('wrong password or confirm password')
     // }
     // else{
-        let user ={
-        username:req.body.username,
-        email:req.body.email,
-        password:req.body.password
-    }
-    let test = await Register.create(user)
+        let {email,username} = req.body;
+        let test = new Register({email,username,password: CryptoJS.AES.encrypt(req.body.password,'secret123').toString()})
+        test.save()
     res.json({test})
     // }
 }

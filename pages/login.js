@@ -6,9 +6,9 @@ export default function Login(){
         <div className="body">
         <Navbar />
         <div className="loginpage">
-            <form action="/" method="get">
-                <input type="text" placeholder="Username" className="logincred" />
-                <input type="password" placeholder="Password" class="logincred" />
+            <form action="/api/login" method="POST">
+                <input type="text" placeholder="Username" name="username" className="logincred" />
+                <input type="password" placeholder="Password" name="password"class="logincred" />
                 <input type="submit" className="submitBtn" value="Submit"/>
             </form>
             <Link href="/forgot">Forgot password</Link>
