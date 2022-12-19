@@ -3,7 +3,7 @@ import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 export default function Login(){
     return(
-        <>
+        <div className="body">
         <Navbar />
         <div className="loginpage">
             <form action="/" method="get">
@@ -15,6 +15,6 @@ export default function Login(){
             <Link href="/signup">Create New Account</Link>
         </div>
         <Footer/>
-        </>
+        </div>
     )
 }

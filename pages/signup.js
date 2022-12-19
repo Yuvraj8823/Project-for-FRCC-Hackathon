@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import Footer from '../components/footer'
 import Navbar from "../components/navbar"
 export default function Login(){
     return(
-        <>
+        <div className="body">
         <Navbar />
         <div className="loginpage">
             <form action="/" method="get">
@@ -15,6 +16,7 @@ export default function Login(){
             <Link href="/forgot">Forgot password</Link>
             <Link href="/login">Login</Link>
         </div>
-        </>
+        <Footer />
+        </div>
     )
 }

@@ -2,7 +2,12 @@
   margin: 0px;
   padding: 0px;
 }
-
+.body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /*navbar*/
 
 .header{
@@ -40,7 +45,41 @@
 .join:hover .joinBtn{
   background-color: black;
 }
-
+/*Hamburger Menu Content*/
+.hamburger{
+  display: none;
+}
+.logo{
+  background-color: #25c95d;
+  height: 100px;
+  width: 100%;
+}
+.sidebarmenu{
+  position:absolute;
+  top:0;
+  left:0;
+  background-color: #e8fff0;
+  box-sizing: border-box;
+  height :100vh;
+  width :0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s;
+}
+.sidelem{
+  box-sizing: content-box;
+  display: inline-block;
+  width:160px;
+  background-color: #e8fff0;  
+ text-align: center;
+  padding: 20px;
+  list-style: none;
+}
+.sidelem:hover{
+  background-color: #bccdc2;
+}
 /* Home Page Content*/
 
 .home{
@@ -61,7 +100,7 @@
   font-size: 62px;
 }
 .hpimg{
-  height: 88.9vh;
+  height: 534px;
 }
 #joinNow{
   width: 300px;
@@ -195,11 +234,10 @@
   cursor: pointer;
 }
 .footer{
-  position: fixed;
-  bottom: 0;
+  
   background-color: #25c95d;
   height: 50px;
-  width: 100%;
+  width: 100vw;
   margin-top: auto;
   
   display: flex;
@@ -220,5 +258,21 @@
     margin-left: 5px;
     width: 180px;
     
+  }
+  .vis{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+  #joinNow{
+    width: 150px;
+    font-size: 32px;
+    border: 2px solid black;
+    border-radius: 40px;
+  }
+  .hpcontent h1{
+    margin-left: 40px;
+    font-size: 40px;
   }
 }
